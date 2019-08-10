@@ -70,9 +70,17 @@ public class Jukebox implements Runnable, ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+if (e.getSource()==button) {
+	saavan.stop();
+	gaana.play();
+
+	// TODO Auto-generated method stub
 		
 	}
+else if ( e.getSource()==buttonn) {
+	gaana.stop();
+	saavan.play();
+}
 
 }
 
@@ -159,5 +167,6 @@ class Song {
 			return this.getClass().getResourceAsStream(songAddress);
 		}
 	}
+}
 }
 
